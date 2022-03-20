@@ -81,7 +81,7 @@ h1 {
     width: 100%;
     border: none;
     background-color: #02cfcf8a;
-    font-family: 'Merriweather', serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1.1rem;
     color: #fff;
     font-weight: 700;
@@ -113,11 +113,30 @@ h1 {
 .container .your-active-class{
     display: block !important;
 }
+
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6em;
+    color: #eee;
+}
+footer p {
+    padding: 10px;
+    margin-left: 5px;
+}
+/* Responsive quaries  */
+
 @media only screen and (min-width: 576px){
     .container{
     max-width: 480px;
     }
-
 
     h1 {
         font-size: 7em;
@@ -125,22 +144,26 @@ h1 {
     }
 }
 
-h2 {
-    border-bottom: 1px solid #cc1;
-    font-family: 'Oxygen', Sans-Serif;
-    font-size: 3em;
-    color: #fff;
-}
 
-p {
-    line-height: 1.6em;
-    color: #eee;
-}
 
 @media (min-width: 768px) { 
 
     .container{
-        max-width: 1140px;
+        max-width: 720px;
     }
  }
 
+ @media (min-width: 992px) { 
+
+    .container{
+       min-width: 920px;
+       max-width: 1140px;
+    }
+
+    @media (min-width: 1200px) { 
+
+        .container{
+            width: 1140x;
+        }
+     }
+ }
