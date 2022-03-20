@@ -74,6 +74,7 @@ h1 {
     width: 125px;
     margin: 0 1.5rem 0 0;
     padding: 0;
+    overflow: hidden;
 }
 .tabs_button{
     padding: 10px;
@@ -89,6 +90,7 @@ h1 {
     cursor: pointer;
     margin-bottom: 0.5rem;
     position: relative;
+    transform: scale(1);
 }
 .tabs_button::after{
     position: absolute;
@@ -99,6 +101,9 @@ h1 {
     right: 1%;
     bottom: 0%;
     border-left: 1px solid #ffffff8c;
+}
+.tabs_button:hover{
+    transform: scale(120%);
 }
 
 .active_button{
