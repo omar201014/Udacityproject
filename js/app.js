@@ -1,45 +1,29 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
+function setupTabs() { 
+    document.querySelectorAll('.tabs_button').forEach(button =>{
+        button.addEventListener('click' , function(){
+        const sideBar = button.parentElement.parentElement;
+        const navContainer = sideBar.parentElement.parentElement;
+        const tabNumber = button.dataset.forNav;
+        const sectionToActivate = navContainer.querySelector(`.tabs_content[data-nav ="${tabNumber}"]`);
 
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
+        // removal of active tabs class 
+            sideBar.querySelectorAll('.tabs_button').forEach(tab =>{
+                tab.classList.remove('active_button')
+            });
+    
+        // removal of active contents 
+            navContainer.querySelectorAll('.tabs_content').forEach(cont =>{
+                cont.classList.remove('your-active-class')
+            });        
+            // activate the clicked tab with its content 
 
-/**
- * Define Global Variables
- * 
-*/
+            button.classList.add('active_button');
+            sectionToActivate.classList.add('your-active-class')
 
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
+        
+        });
+        
+    });
+}
+// call the function 
+document.addEventListener("DOMContentLoaded" , setupTabs)

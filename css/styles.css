@@ -16,17 +16,109 @@ body {
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
+    line-height: 1.5;
+}
+*{    
+    scroll-behavior: smooth;
+    box-sizing: border-box;    
+}
+:root{
+    
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;  
+}
+
+ul{
+    list-style: none;
 }
 
 
 /* Typeography General*/
+#section2{
+    text-align: center;
+    background-color: #008d8d;
+}
+
+#section4{
+    text-align: right;
+    background-color: #1d8b8b;
+}
+#section1,#section3{
+    background-color: #1d8b8b54;
+}
+
+
+
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
 }
 
-@media only screen and (min-width: 35em){
+.container{
+    border: 1px solid #cccccc;
+    display: flex;
+    margin: 0 auto;
+    width: 1140px;
+}
+.navbar__menu{
+    display: flex;
+}
+.tabs__sidebar{
+    flex-shrink: 0;
+    background-color: #008d8d;
+    width: 125px;
+    margin: 0 1.5rem 0 0;
+    padding: 0;
+}
+.tabs_button{
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #02cfcf8a;
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.tabs_button::after{
+    position: absolute;
+    content: "";
+    background-color: #017171;
+    width: 6px;
+    height: 100%;
+    right: 1%;
+    bottom: 0%;
+    border-left: 1px solid #ffffff8c;
+}
+
+.active_button{
+    background-color: #002929cb;
+    font-weight: bolder;
+    border-bottom: 1px solid white;
+}
+.container .tabs_content {
+    display: none;
+    padding: 15px;
+}
+.container .your-active-class{
+    display: block !important;
+}
+@media only screen and (min-width: 576px){
+    .container{
+    max-width: 480px;
+    }
+
+
     h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
@@ -44,3 +136,11 @@ p {
     line-height: 1.6em;
     color: #eee;
 }
+
+@media (min-width: 768px) { 
+
+    .container{
+        max-width: 1140px;
+    }
+ }
+
