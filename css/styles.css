@@ -91,6 +91,7 @@ h1 {
     margin-bottom: 0.5rem;
     position: relative;
     transform: scale(1);
+    transition: all 300ms ease;
 }
 .tabs_button::after{
     position: absolute;
@@ -137,6 +138,31 @@ footer p {
     margin-left: 5px;
 }
 /* Responsive quaries  */
+@media (min-width: 0px) and (max-width: 575px) {
+
+    .container{
+        max-width: 340px;
+        flex-flow: column;
+        }
+        h1{
+            font-size: 5.2rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            padding: 5px;
+            margin-left: 3px;
+        }
+        .tabs__sidebar{
+            width: 100%;
+            display: block;
+        }
+        .tabs_content{
+            display: table-cell;
+        }
+
+}
 
 @media only screen and (min-width: 576px){
     .container{
