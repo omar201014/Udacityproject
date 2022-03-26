@@ -82,6 +82,7 @@ h1 {
     overflow: hidden;
     display: flex;
     flex-flow: column;
+    border-radius: 18px 0 0 18px;
 }
 .tabs_button{
     padding: 10px;
