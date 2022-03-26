@@ -156,6 +156,9 @@ footer p {
         max-width: 340px;
         flex-flow: column;
         }
+    .container .tabs_content{
+        height: 120vh;
+    }    
 
         h1{
             font-size: 5.2rem;
@@ -186,7 +189,9 @@ footer p {
     .container{
     max-width: 480px;
     }
-
+    .container .tabs_content{
+        height: 120vh;
+    }  
     h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
