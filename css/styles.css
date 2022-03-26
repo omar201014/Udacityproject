@@ -18,10 +18,12 @@ body {
     color: #fff;
     line-height: 1.5;
 }
+
 *{    
     scroll-behavior: smooth;
     box-sizing: border-box;    
 }
+
 :root{
     
     padding: 0;
@@ -61,20 +63,25 @@ h1 {
 
 .container{
     border: 1px solid #cccccc;
-    display: flex;
+    
     margin: 0 auto;
     width: 1140px;
 }
+
 .navbar__menu{
-    display: flex;
+    position: sticky;
+    top: 46%;
+    width: 80px;
+    left: 95%;  
 }
+
 .tabs__sidebar{
-    flex-shrink: 0;
     background-color: #008d8d;
-    width: 125px;
     margin: 0 1.5rem 0 0;
     padding: 0;
     overflow: hidden;
+    display: flex;
+    flex-flow: column;
 }
 .tabs_button{
     padding: 10px;
@@ -113,7 +120,7 @@ h1 {
     border-bottom: 1px solid white;
 }
 .container .tabs_content {
-    display: none;
+    height: 100vh;
     padding: 15px;
 }
 .container .your-active-class{
@@ -137,6 +144,10 @@ footer p {
     padding: 10px;
     margin-left: 5px;
 }
+
+
+
+
 /* Responsive quaries  */
 @media (min-width: 0px) and (max-width: 575px) {
 
@@ -144,24 +155,30 @@ footer p {
         max-width: 340px;
         flex-flow: column;
         }
+
         h1{
             font-size: 5.2rem;
         }
+
         h2{
             font-size: 2rem;
         }
+
         p{
             padding: 5px;
             margin-left: 3px;
         }
+
         .tabs__sidebar{
             width: 100%;
-            display: block;
+            display: flex;
+            justify-content: space-between;
         }
-        .tabs_content{
-            display: table-cell;
-        }
+        
+        .tabs_button{
+            border-radius: 10% 0% 0 10%;
 
+        }
 }
 
 @media only screen and (min-width: 576px){
