@@ -159,7 +159,9 @@ footer p {
     .container .tabs_content{
         height: 120vh;
     }    
-
+    .navbar__menu{
+        width: 10%;
+    }
         h1{
             font-size: 5.2rem;
         }

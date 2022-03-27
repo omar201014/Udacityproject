@@ -1,3 +1,14 @@
+
+const navBar = document.querySelector('.tabs__sidebar')
+for (let i=1; i<=4; i++){
+const item = document.createElement('li')
+ item.innerHTML = `<a href="#section${i}" >S ${i}</a>`
+ item.classList.add('tabs_button')
+navBar.appendChild(item)
+}
+
+
+
 function setupTabs() { 
     document.querySelectorAll('.tabs_button').forEach(button =>{
         button.addEventListener('click' , function(){
@@ -27,3 +38,6 @@ function setupTabs() {
 }
 // call the function 
 document.addEventListener("DOMContentLoaded" , setupTabs)
+
+
+
