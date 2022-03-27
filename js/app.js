@@ -4,6 +4,7 @@ for (let i=1; i<=4; i++){
 const item = document.createElement('li')
  item.innerHTML = `<a href="#section${i}" >S ${i}</a>`
  item.classList.add('tabs_button')
+ item.setAttribute('data-for-nav' ,`Section ${i}`) 
 navBar.appendChild(item)
 }
 
