@@ -1,11 +1,18 @@
 
 const navBar = document.querySelector('.tabs__sidebar')
-for (let i=1; i<=4; i++){
+const sections = Array.from(document.getElementsByClassName('tabs_content'))
+for (section of sections){
 const item = document.createElement('li')
- item.innerHTML = `<a href="#section${i}" >S ${i}</a>`
- item.classList.add('tabs_button')
- item.setAttribute('data-for-nav' ,`Section ${i}`) 
+item.classList.add('buttton_holder')
+ const itemLink = document.createElement('a')
+ itemLink.textContent= section.dataset.nav
+ itemLink.classList.add('tabs_button')
+const id = section.getAttribute('id')
+itemLink.setAttribute('data-for-nav' , id )
+itemLink.setAttribute('href' , `#${id}`)
+item.appendChild(itemLink)  
 navBar.appendChild(item)
+console.log(section);
 }
 
 

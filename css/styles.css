@@ -71,9 +71,8 @@ h1 {
 
 .navbar__menu{
     position: sticky;
-    top: 46%;
-    width: 80px;
-    left: 95%;  
+    width: 108%;
+    top: 0;
 }
 
 .tabs__sidebar{
@@ -82,8 +81,10 @@ h1 {
     padding: 0;
     overflow: hidden;
     display: flex;
-    flex-flow: column;
-    border-radius: 18px 0 0 18px;
+    flex-flow: row;
+}
+.buttton_holder{
+    width: calc(100%/4);
 }
 .tabs_button{
     padding: 10px;
@@ -154,15 +155,13 @@ footer p {
 @media (min-width: 0px) and (max-width: 575px) {
 
     .container{
-        max-width: 340px;
-        flex-flow: column;
+        max-width: 360px;
         }
+
     .container .tabs_content{
         height: 120vh;
     }    
-    .navbar__menu{
-        width: 10%;
-    }
+    
         h1{
             font-size: 5.2rem;
         }
@@ -175,22 +174,23 @@ footer p {
             padding: 5px;
             margin-left: 3px;
         }
-
+        .buttton_holder{
+            width: 95%;
+            margin: 0 auto;
+        }
         .tabs__sidebar{
             width: 100%;
             display: flex;
             justify-content: space-between;
+            flex-flow: column;
         }
         
-        .tabs_button{
-            border-radius: 10% 0% 0 10%;
-
-        }
+        
 }
 
 @media only screen and (min-width: 576px){
     .container{
-    max-width: 480px;
+    max-width: 565px;
     }
     .container .tabs_content{
         height: 120vh;
@@ -206,7 +206,7 @@ footer p {
 @media (min-width: 768px) { 
 
     .container{
-        max-width: 720px;
+        max-width: 765px;
     }
  }
 
