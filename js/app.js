@@ -1,4 +1,4 @@
-
+// making a dynamic navigational bar 
 const navBar = document.querySelector('.tabs__sidebar')
 const sections = Array.from(document.getElementsByClassName('tabs_content'))
 for (section of sections){
@@ -12,19 +12,22 @@ itemLink.setAttribute('data-for-nav' , id )
 itemLink.setAttribute('href' , `#${id}`)
 item.appendChild(itemLink)  
 navBar.appendChild(item)
-console.log(section);
 }
 
 
-
+// setting the event when clicking
 function setupTabs() { 
     document.querySelectorAll('.tabs_button').forEach(button =>{
-        button.addEventListener('click' , function(){
+        button.addEventListener('click' , function(event){
         const sideBar = button.parentElement.parentElement;
         const navContainer = sideBar.parentElement.parentElement;
         const tabNumber = button.dataset.forNav;
         const sectionToActivate = navContainer.querySelector(`.tabs_content[data-nav ="${tabNumber}"]`);
 
+        // set the scroll behavior for each section
+        event.preventDefault()
+        sectionToActivate.scrollIntoView({behavior : "smooth" , block : "start"})
+          
         // removal of active tabs class 
             sideBar.querySelectorAll('.tabs_button').forEach(tab =>{
                 tab.classList.remove('active_button')
