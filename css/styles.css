@@ -84,6 +84,7 @@ h1 {
 }
 .buttton_holder{
     width: calc(100%/4);
+    text-align: center;
 }
 .tabs_button{
     padding: 10px;
@@ -124,6 +125,7 @@ h1 {
 .container .tabs_content {
     height: 100vh;
     padding: 15px;
+    margin-bottom: 1.2rem;
 }
 .container .your-active-class{
     display: block !important;
@@ -136,6 +138,9 @@ h2 {
     font-size: 3em;
     color: #fff;
 }
+.page__footer{
+    background-color: rgba(0, 13, 60, 0.616);
+}
 
 p {
     font-family: 'Work Sans', sans-serif;
@@ -144,7 +149,6 @@ p {
 }
 footer p {
     padding: 10px;
-    margin-left: 5px;
 }
 
 
@@ -192,7 +196,7 @@ footer p {
     max-width: 565px;
     }
     .container .tabs_content{
-        height: 120vh;
+        height: 164vh;
     }  
     h1 {
         font-size: 7em;
