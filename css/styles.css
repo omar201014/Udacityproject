@@ -124,8 +124,7 @@ h1 {
 }
 .container .tabs_content {
     height: 100vh;
-    padding: 15px;
-    margin-bottom: 1.2rem;
+    padding: 30px;
 }
 .container .your-active-class{
     display: block !important;
