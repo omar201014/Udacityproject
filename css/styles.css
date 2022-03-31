@@ -191,7 +191,7 @@ footer p {
         
 }
 
-@media only screen and (min-width: 576px){
+@media (min-width: 576px){
     .container{
     max-width: 565px;
     }
@@ -211,6 +211,9 @@ footer p {
     .container{
         max-width: 765px;
     }
+    .container .tabs_content{
+        height: 100vh;
+    }  
  }
 
  @media (min-width: 992px) { 
